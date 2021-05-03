@@ -18,7 +18,8 @@
         android:layout_height="wrap_content"
         android:text="@string/home_page_last_plant_setion"
         android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"/>
+        android:layout_marginLeft="20dp"
+        style="@style/SubTitleTextStyle"/>
 "
         />
 
