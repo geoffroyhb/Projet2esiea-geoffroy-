@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20sp"
         android:text="@string/home_page_title"
-        app:layout_constraintStart_toStarOf="parent"/>
+        tools:ignore="MissingConstraints" />
 
     <FrameLayout
         android:id="@+id/fragment_container"
@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="@string/app_name"
-            app:layout_constraintStart_toStarOf="parent" />
+             />
     </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
