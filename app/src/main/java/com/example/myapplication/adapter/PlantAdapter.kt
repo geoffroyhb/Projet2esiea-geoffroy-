@@ -23,15 +23,13 @@ import com.example.myapplication.R
         return ViewHolder(view)
      }
 
-
-
-     override fun getItemCount(): Int {
-         return 5
-     }
-
      override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
      }
+
+     override fun getItemCount(): Int=5
+
+
 
 
  }
