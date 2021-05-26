@@ -8,11 +8,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+import com.example.myapplication.MainActivity
 import com.example.myapplication.Plantmodel
 import com.example.myapplication.R
 
 
  class PlantAdapter (
+     private val context :MainActivity,
      private val plantList:List<Plantmodel>,
      private val layoutId:Int
  ) : RecyclerView.Adapter<PlantAdapter.ViewHolder>() {
@@ -31,7 +34,8 @@ import com.example.myapplication.R
          // recuperer les infos
          val currentPlant = plantList[position]
 
-
+            //utiliser glide pour recuperer l'image de son lien
+            Glide.with(context)
      }
 
      override fun getItemCount(): Int= plantList.size
