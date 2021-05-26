@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.R
 
 
- class PlantAdapter () : RecyclerView.Adapter<PlantAdapter.ViewHolder>() {
+ class PlantAdapter (private val layoutId:Int) : RecyclerView.Adapter<PlantAdapter.ViewHolder>() {
      //boite pou ranger tout les composants
      class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
          val plantImage = view.findViewById<ImageView>(R.id.image_item)
@@ -19,7 +19,7 @@ import com.example.myapplication.R
 
 
      override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view =LayoutInflater.from(parent.context).inflate(R.layout.item_horizontable_plant, parent,false)
+        val view =LayoutInflater.from(parent.context).inflate(layoutId, parent,false)
         return ViewHolder(view)
      }
 
