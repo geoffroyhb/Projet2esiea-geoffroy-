@@ -12,6 +12,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.myapplication.MainActivity
+import com.example.myapplication.PlantRepository
 import com.example.myapplication.Plantmodel
 import com.example.myapplication.R
 import org.w3c.dom.Text
@@ -40,6 +41,8 @@ class PlantAdapter (
          // recuperer les infos
          val currentPlant = plantList[position]
 
+         val repo =PlantRepository()
+
             //utiliser glide pour recuperer l'image de son lien
             Glide.with(context).load(Uri.parse(currentPlant.imageUrl)).into(holder.plantImage)
 
@@ -58,6 +61,13 @@ class PlantAdapter (
          }
          else {
              holder.likeIcon.setImageResource(R.drawable.ic_unlike)
+         }
+         holder.likeIcon.setOnClickListener{
+
+             //inversement du bouton like ou unlike
+             currentPlant.liked = !currentPlant.liked
+             //mettre à jour
+            repo.updatePlant(currentPlant)
          }
      }
 
